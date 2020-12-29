@@ -24,11 +24,3 @@ body {
 	background-color: #f5f5f5;
 	padding-top: 20px;
 }
-
-.alert {
-        overflow: hidden;
-        -ms-text-overflow: ellipsis;
-        -o-text-overflow: ellipsis;
-        text-overflow: ellipsis;
-        display: block;
-}
