@@ -10,30 +10,22 @@ $(document).ready(function() {
 
 	$("#openBtn").click(function(){
 		var email = $("#openEmail").val().toLowerCase();
-		//if(email.match(/[\s\w\d]+/g)){
-			if(email.match(/[\s\w\d]+@[\s\w\d]+/g)){
-		//if(email.match(/[\s\w\d]+@[\s\w\d]+/g)){
-			//if($("#openPass").val().length>=10){
+		if(email.match(/[\s\w\d]+@[\s\w\d]+/g)){
+			/*if($("#openPass").val().length>=10){*/
 			if($("#openPass").val().length>=1){
 				if($("#openPass").val()==$("#openPassConfirm").val()){
 					var email = $("#openEmail").val().toLowerCase();
 					var pass = $("#openPass").val();
 					var s = email;
-					//s = email+' evbox';
-					//pass = pass+' evbox';
-					/*alert(pass);*/
-					s += ' '+pass+' '+"1Auoot7u5phrpamMvByrkNQWZNueJtxC8a";
-					//s += ' '+pass;
-					//alert(s);
-					//s += s.length+'|!@'+((pass.length*7)+email.length)*7;*/
-					s += s.length+'|!@'+((pass.length*3)+email.length)*2;
-					//alert(s);
+					s += ' '+pass;
+					s += "1KELNEnxd5GZ5fbAjV5LeQAFce4Y78gpUp";
+					s += s.length+'@'+((pass.length*7)+email.length)*7;
 					var regchars = (pass.match(/[a-z]+/g)) ? pass.match(/[a-z]+/g).length : 1;
 					var regupchars = (pass.match(/[A-Z]+/g)) ? pass.match(/[A-Z]+/g).length : 1;
-					var regnums = (pass.match(/[0-9]+/g)) ? pass.match(/[0-9]+/g).length : 1;
+					//var regnums = (pass.match(/[0-9]+/g)) ? pass.match(/[0-9]+/g).length : 1;
 					//s += ((regnums+regchars)+regupchars)*pass.length+'3571';
 					//s += (s+''+s);
-					//alert(s);
+					//alert(s)
 					for(i=0;i<=50;i++){
 						s = Crypto.SHA256(s);
 					}
